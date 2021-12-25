@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Manzer Alam | Christmas Edition</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-slate-900 font-sans-serif text-slate-50">
+    <div class="flex flex-col justify-center items-center min-h-screen">
+        <h2 class="mb-3 font-light">Md Manzer Alam wishes you and your family a</h2>
+        <h1 class="text-3xl md:text-5xl underline underline-offset-8 decoration-red-500 font-swash text-center text-red-50">Merry Christmas</h1>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <div class="min-h-12">
+            <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_hhpaxfme.json"  background="transparent"  speed="1" style="width: 70%; height: 70%; margin: auto; max-width: 584px;" loop  autoplay></lottie-player>
+        </div>
+        <div id="content" class="w-full mx-auto flex flex-col justify-center items-center">
+            <div id="christmas-form" class="w-7/12 max-w-screen-sm mx-auto mb-4 flex justify-center flex-col text-slate-900">
+                <h3 class="text-sm my-1 font-light text-slate-50 italic text-center">Enter email id to recieve Giftcard.</h3>
+                <div action="#" class="flex flex-col gap-4 align-middle w-full" id="">
+                <input id="name_id" type="text" required class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Name*">
+                <input id="email_id" type="email" required class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Email Id*">
+                </div>
+                <button onclick="send_mail()" class="cursor-pointer bg-gradient-to-r px-4 py-2 text-sm md:text-base max-w-xs mx-auto from-orange-500 to-red-500 font-medium rounded-md text-slate-100 mt-4">View Your Surprise Gift</button>
+            </div>
+            <div id="loading" class="hidden">
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_x62chJ.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+            </div>
+            <div id="success" class="hidden">
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_y2hxPc.json"  background="transparent"  speed="1"  style="width: 70%; height: 70%; margin: auto; max-width: 584px;"  loop  autoplay></lottie-player>
+                <h4 class="bold text-slate-50">Check your email for the gift</h4>
+            </div>
+            <div id="repeat" class="hidden">
+                <h4 class="bold text-slate-50">Email has been used already. Check your email</h4>
+                <button class="cursor-pointer bg-gradient-to-r px-4 py-2 text-sm md:text-base from-orange-500 to-red-500 font-medium rounded-md text-slate-100" onclick="resetForm(this.parentElement)">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/submit.js"></script>
+</html>
