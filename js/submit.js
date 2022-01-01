@@ -16,7 +16,7 @@ function send_mail() {
         alert("Please enter a valid email");
     }
     else {
-        var url = "https://charabdys-mail.herokuapp.com/submit_mail/chr2467";
+        var url = "https://charabdys-mail-new.herokuapp.com/submit_mail/87ba52d0-7f4d-4fd5-ac52-4bb8fb141138";
         let request = new XMLHttpRequest();
         request.open("POST", url, true);
         request.setRequestHeader("Content-Type", "application/json");
